@@ -5,11 +5,11 @@ import os
 # Module for reading .csv files
 import csv
 
-csvpath = 'budget_data.csv'
-with open(csvpath, newline='') as csvfile:
+with open('budget_data.csv', 'rt') as csvfile:
     csvreader = csv.reader(csvfile , delimiter = ',')
-    for row in csvreader:
-        print(row)
-   
+    row = next(csvreader)
+    print(row)
+    row = next(csvreader)
+    print(row)
 
 
